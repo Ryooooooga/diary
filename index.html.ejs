@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日記</title>
+</head>
+<body>
+  <h1>日記</h1>
+  <ul>
+    <%_ for (const { year, months } of years) { _%>
+    <li>
+      <%= year %>年
+      <ul>
+        <%_ for (const { month, files } of months) { _%>
+        <li>
+          <a href="<%= year %>/<%= month %>"><%= year %>年 <%= month %>月 (<%= files.length %>)</a>
+        </li>
+        <%_ } _%>
+      </ul>
+    </li>
+    <%_ } _%>
+  </ul>
+</body>
+</html>

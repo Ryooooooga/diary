@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= year %>年 <%= month %>月 - 日記</title>
+</head>
+<body>
+  <h1><%= year %>年 <%= month %>月</h1>
+  <%_ for (const { date, html } of files) { _%>
+  <hr>
+  <h2><%= year %>年 <%= month %>月 <%= date %>日</h2>
+  <%- html _%>
+  <%_ } _%>
+</body>
+</html>
