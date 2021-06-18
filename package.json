@@ -2,10 +2,10 @@
   "name": "diary",
   "version": "1.0.0",
   "description": "日記",
-  "main": "index.js",
+  "main": "build.js",
   "scripts": {
     "start": "http-server -c-1 -p 3000 ./dist",
-    "build": "node index.js",
+    "build": "node build.js",
     "test": "true"
   },
   "repository": {

@@ -53,11 +53,11 @@ const marked = require('marked');
 
   const distDir = `${__dirname}/dist`;
 
-  await renderEjs(`${__dirname}/index.html.ejs`, `${distDir}/index.html`, { years });
+  await renderEjs(`${__dirname}/templates/index.html.ejs`, `${distDir}/index.html`, { years });
 
   for (const { year, months } of years) {
     for (const { month, files } of months) {
-      await renderEjs(`${__dirname}/_diary.html.ejs`, `${distDir}/${year}/${month}/index.html`, { year, month, files });
+      await renderEjs(`${__dirname}/templates/diary.html.ejs`, `${distDir}/${year}/${month}/index.html`, { year, month, files });
     }
   }
 })();
