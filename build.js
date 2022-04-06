@@ -2,7 +2,7 @@ const { promisify } = require('util');
 const path = require('path');
 const fs = require('fs');
 const ejs = require('ejs');
-const marked = require('marked');
+const { marked } = require('marked');
 
 (async () => {
   function listDirs(path) {
